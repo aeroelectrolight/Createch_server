@@ -1,0 +1,8 @@
+api:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    type: rest
+    prefix: /
+    
+app_homepage:
+    path:     /
+    defaults: { _controller: AppBundle:Default:index }

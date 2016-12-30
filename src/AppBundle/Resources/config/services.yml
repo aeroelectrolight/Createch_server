@@ -1,0 +1,3 @@
+services:
+    form_serializer:
+        class: AppBundle\Services\FormErrorsSerializer

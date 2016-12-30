@@ -1,0 +1,39 @@
+couleurs:
+    type: rest
+    resource: AppBundle\Controller\Settings\CouleurController
+
+fonctions:
+    type: rest
+    resource: AppBundle\Controller\Settings\FonctionController
+
+groupes:
+    type: rest
+    resource: AppBundle\Controller\Settings\GroupeController
+
+conventions:
+    type: rest
+    resource: AppBundle\Controller\Settings\ConventionController
+
+places:
+    type: rest
+    resource: AppBundle\Controller\Settings\LieuController
+
+personnels:
+    type: rest
+    resource: AppBundle\Controller\Settings\PersonnelController
+
+worktimes:
+    type: rest
+    resource: AppBundle\Controller\Settings\WorktimeController
+
+events:
+    type: rest
+    resource: AppBundle\Controller\Events\EventsController
+
+budgets:
+    type: rest
+    resource: AppBundle\Controller\Events\BudgetsController
+
+verifications:
+    type: rest
+    resource: AppBundle\Controller\Maintenances\VerificationsController
