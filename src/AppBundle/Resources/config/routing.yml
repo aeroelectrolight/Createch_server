@@ -37,3 +37,7 @@ budgets:
 verifications:
     type: rest
     resource: AppBundle\Controller\Maintenances\VerificationsController
+
+maintenances:
+    type: rest
+    resource: AppBundle\Controller\Maintenances\MaintenancesController
