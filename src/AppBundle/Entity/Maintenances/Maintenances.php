@@ -3,6 +3,7 @@
 namespace AppBundle\Entity\Maintenances;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Maintenances
@@ -25,6 +26,9 @@ class Maintenances
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
+     * @Assert\NotBlank(
+     *      message="Le titre ne peut pas être vide"
+     * )
      */
     private $title;
 
@@ -60,6 +64,9 @@ class Maintenances
      * @var string
      *
      * @ORM\Column(name="description", type="text")
+     * @Assert\NotBlank(
+     *      message="La description ne peut pas être vide"
+     * )
      */
     private $description;
 

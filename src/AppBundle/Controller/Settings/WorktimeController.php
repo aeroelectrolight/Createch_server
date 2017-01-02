@@ -104,5 +104,8 @@ class WorktimeController extends FOSRestController{
         $worktime = $em->getRepository('AppBundle:Settings\Worktime')->find($id);
         $em->remove($worktime);
         $em->flush();
+        $response = new Response;
+        $response->setStatusCode(200);
+        return $response;
     }
 }

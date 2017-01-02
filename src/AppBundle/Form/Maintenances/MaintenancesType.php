@@ -4,7 +4,7 @@ namespace AppBundle\Form\Maintenances;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -18,9 +18,22 @@ class MaintenancesType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('dateOrigin', DateTimeType::class)
-            ->add('dateWork', DateTimeType::class)
-            ->add('dateResolved', DateTimeType::class)
+            ->add('dateOrigin', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
+            ))
+            ->add('dateVisit', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
+            ))
+            ->add('dateWork', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
+            ))
+            ->add('dateResolved', DateType::class, array(
+                'widget' => 'single_text',
+                'format' => 'yyyy-MM-dd'
+            ))
             ->add('description')
             ->add('category')
         ;
