@@ -34,3 +34,7 @@
 
 # Composer PHAR
 /composer.phar
+
+node_modules/
+
+web/static\.old/
