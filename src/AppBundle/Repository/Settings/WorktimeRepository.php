@@ -29,6 +29,7 @@ class WorktimeRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('w');
         $qb->where('w.timeclock >= :datein')
                 ->andWhere('w.timeclock <= :dateout')
+                ->orderBy('w.timeclock', 'DESC')
                 ->setParameters([
                     'datein' => $datein,
                     'dateout' => $dateout
